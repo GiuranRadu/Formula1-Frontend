@@ -1,0 +1,13 @@
+
+<app-header *ngIf="!path.startsWith('/main')"></app-header>
+<app-header2 *ngIf="path.startsWith('/main')"></app-header2>
+
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+
+
+
+

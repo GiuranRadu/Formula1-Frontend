@@ -1,0 +1,33 @@
+<!-- <button (click)="test()">TEST</button> -->
+
+<div class="container">
+  <section class="circuits">
+    <h3>Click on desired circuit to see more details</h3>
+
+    <div class="above-table-div">
+      <h2>All Circuits</h2>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>          
+          <th>Country</th>
+          <th>Pilots Participated</th>          
+        </tr>
+      </thead>
+      <tbody *ngFor="let circuit of circuitsStats,  let i = index" (click)="goToCircuit(circuit.circuitId)">
+        <!-- Add your table rows with actual data here -->
+        <tr>
+          <td>{{i+1}}</td>
+          <td>{{circuit.circuitName}} <span>({{circuit.country}})</span></td>         
+          <td>{{circuit.country}}</td>
+          <td>{{circuit.pilotsAttended}}</td>          
+        </tr>
+      </tbody>
+
+    </table>
+
+  </section>
+</div>
