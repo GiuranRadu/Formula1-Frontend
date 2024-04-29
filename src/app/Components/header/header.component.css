@@ -47,3 +47,13 @@
   background-color:  rgb(212, 17, 17);
   color :  white;  
 }
+
+@media(max-width:450px){
+  .header-div {
+    padding: 20px;
+  }
+
+  .aHref-div {  
+    width: 150px;    
+  }
+}
