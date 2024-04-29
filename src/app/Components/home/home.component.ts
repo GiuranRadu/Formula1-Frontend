@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -27,11 +27,8 @@ export class HomeComponent implements OnInit {
       } else {
         this.renderer.removeClass(sec.nativeElement, 'show-animate');
       }
-    });
-    
+    });    
   }
 
-  test(){
-    console.log(this.sections);
-  }
+ 
 }
