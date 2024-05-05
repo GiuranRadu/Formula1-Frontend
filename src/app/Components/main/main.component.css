@@ -1,15 +1,15 @@
-@keyframes slideInLeft {
-  from{
-    transform: translateX(-750px);
-  }
-
-  to{
-    transform: translateX(750px);
-  }
+.slideInLeft {
+  animation: slideInLeft 18s linear infinite;
 }
 
-.slideInLeft{
-  animation: slideInLeft 18s linear infinite;
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-40vw);
+  }
+
+  to {
+    transform: translateX(40vw);
+  }
 }
 
 .container {
@@ -36,7 +36,7 @@
   padding-bottom: 200px;
   display: flex;
   flex-direction: column;
-  gap: 150px;
+  gap: 120px; 
 }
 
 .teams {
@@ -69,13 +69,13 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  width: 40vw;
 }
 
 .pilots-div {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
-  gap: 80px;
   flex-wrap: wrap;
 }
 
@@ -119,6 +119,40 @@
 }
 
 .pilotInfo p {
-  /* background-color: rgb(225, 225, 225); */
   margin: 5px 0;
+}
+
+@media(max-width:700px) {
+
+  .team {
+    padding: 20px 20px 60px 20px;   
+  }
+
+  .teams h1 {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  .team h2 {
+   font-size: 16px;
+  }
+
+  
+}
+
+@media(max-width:700px) {
+  .container2 {    
+    width: 90%;   
+  }
+
+  .pilot {   
+    padding: 18px 10px 0 10px;   
+    margin-bottom: 10px;
+  }
+
+  .pilotInfo>p{
+    font-size: 10px;
+    margin-top: 2px;
+  }
+
 }

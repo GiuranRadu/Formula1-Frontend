@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
@@ -13,16 +13,13 @@ import Swal from 'sweetalert2';
 })
 export class Header2Component implements OnInit {
 
-
   loggedUser: any = "";
-
 
 
   constructor(private router: Router, private cookieService: CookieService, public dialog: MatDialog) { }
   ngOnInit(): void {
     this.getLoggedUserDetails()
   }
-
 
   logoutButton() {
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
@@ -37,7 +34,8 @@ export class Header2Component implements OnInit {
 
         this.cookieService.delete('token');
         this.cookieService.delete('loggedUser');
-        window.localStorage.clear() //! solves that cookie issue -> Some persistant web sites backup cookies in localStorage
+        window.localStorage.clear() 
+        //! solves that cookie issue -> Some persistant web sites backup cookies in localStorage
 
         Swal.fire(`Goodbye ${this.loggedUser.name}!`);
         setTimeout(() => {
@@ -56,6 +54,26 @@ export class Header2Component implements OnInit {
     } else {
       console.log('No users logged');
     }
+  }
+
+
+  @ViewChild('descendingNavbar') descendingNavbarRef: ElementRef;
+  handleDescendingNavbar() {
+    const navbarElement = this.descendingNavbarRef.nativeElement;
+
+    if (!navbarElement.classList.contains('slideDown')) {
+      navbarElement.classList.add('slideDown');
+      
+    } else {
+      navbarElement.classList.add('slideUp');
+      navbarElement.classList.remove('slideDown');
+    }
+  }
+
+  selectRoute(){
+    const navbarElement = this.descendingNavbarRef.nativeElement;
+    navbarElement.classList.add('slideUp');
+    navbarElement.classList.remove('slideDown');
   }
 
 }

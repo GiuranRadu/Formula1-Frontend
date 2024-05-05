@@ -1,17 +1,14 @@
 <header class="header">
-
   <div class="left-div">
     <div class="img-div">
       <a href="main/">
         <img src="../../../assets/F3.svg.png" alt="logo">
       </a>
     </div>
-
     <div class="aHref-div">
       <a routerLinkActive="active" routerLink="main/availableCircuits">Available Circuits</a>
       <a routerLinkActive="active" routerLink="main/selectCircuits" *ngIf="loggedUser.role!=='full'">Select Circuits</a>
       <a routerLinkActive="active" routerLink="main/comments">Comments</a>
-     
       <a routerLinkActive="active" routerLink="main/drivers" *ngIf="loggedUser.role==='full'">Drivers stats</a>
       <a routerLinkActive="active" routerLink="main/circuitsStats" *ngIf="loggedUser.role==='full'">Circuits stats</a>
       <a routerLinkActive="active" routerLink="main/seeYourProfile">See your profile</a>
@@ -19,8 +16,21 @@
   </div>
 
   <div class="user-div">
+    <img src="../../../assets/burger-menu.svg" alt="" class="hamburger-icon" (click)="handleDescendingNavbar()">
     <p>👤{{loggedUser.name}}</p>
     <button (click)="logoutButton()">Logout</button>
-    
+
+  </div>
+  <div class="descending-navbar" #descendingNavbar>
+    <a (click)="selectRoute()" routerLinkActive="active" routerLink="main/availableCircuits">Available Circuits</a>
+    <a (click)="selectRoute()" routerLinkActive="active" routerLink="main/selectCircuits"
+      *ngIf="loggedUser.role!=='full'">Select Circuits</a>
+    <a (click)="selectRoute()" routerLinkActive="active" routerLink="main/comments">Comments</a>
+    <a (click)="selectRoute()" routerLinkActive="active" routerLink="main/drivers"
+      *ngIf="loggedUser.role==='full'">Drivers stats</a>
+    <a (click)="selectRoute()" routerLinkActive="active" routerLink="main/circuitsStats"
+      *ngIf="loggedUser.role==='full'">Circuits stats</a>
+    <a (click)="selectRoute()" routerLinkActive="active" routerLink="main/seeYourProfile">See your profile</a>
+    <button (click)="logoutButton()">Logout</button>
   </div>
 </header>
