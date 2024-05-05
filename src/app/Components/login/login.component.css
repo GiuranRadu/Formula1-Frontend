@@ -20,7 +20,6 @@ h1{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 600px;
   margin: 0 auto;  
-  /* position: relative; */
   opacity: 0.9;
 
 }
@@ -101,4 +100,11 @@ button:hover {
 
 .register-div  :hover{
   background-color:  rgb(217, 77, 77);
+}
+
+
+@media(max-width:650px){
+  .form-div{
+    width: 90%;
+  }
 }

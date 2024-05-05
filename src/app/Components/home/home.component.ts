@@ -5,14 +5,12 @@ import { Component, ElementRef, HostListener, OnInit, QueryList, Renderer2, View
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
   @ViewChildren('section') sections: QueryList<ElementRef>;
 
   constructor(private renderer: Renderer2) { }
 
-  ngOnInit(): void {
-  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -27,8 +25,8 @@ export class HomeComponent implements OnInit {
       } else {
         this.renderer.removeClass(sec.nativeElement, 'show-animate');
       }
-    });    
+    });
   }
 
- 
+
 }

@@ -54,6 +54,12 @@
   }
 
   .aHref-div {  
-    width: 150px;    
+    width: 180px;    
+  }
+
+  .aHref-div a{
+    padding: 6px;
+    width: 80px;
+    text-align: center;
   }
 }

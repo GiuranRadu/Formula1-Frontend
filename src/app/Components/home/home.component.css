@@ -6,11 +6,8 @@ section {
   min-height: 100vh;
   background: linear-gradient(to bottom,
       #090a0b 20%,
-      /* Start color at 0% */
       #272b30 50%,
-      /* Transition to second color at 50% */
       #090a0b 80%
-      /* End with third color at 100% */
     );
   overflow-x: hidden;
 }
@@ -39,7 +36,6 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: flex-start;
-
 }
 
 
@@ -169,6 +165,33 @@ section.show-animate .animate {
   .sec-0>h1 {
     font-size: 40px;
   }
+
+
+  .sec-1>h1,
+  .sec-2>h1,
+  .sec-3>h1,
+  .sec-5>h1{
+    font-size: 50px;
+  }
+
+  .sec-1>p,
+  .sec-2>p,
+  .sec-3>p
+  .sec-5>p{
+    font-size: 20px;
+  }
+
+  .sec-1>img,
+  .sec-2>img,
+  .sec-3>img{
+    width: 80%
+  }
+
+  .sec-5 .images img {
+    max-width: 150px;
+    margin: 0 20px;
+  }
+  
 }
 
 
@@ -184,4 +207,35 @@ section.show-animate .animate {
   .sec-0>h4 {
     font-size: 10px;
   }
+
+  .sec-1>h1,
+  .sec-2>h1,
+  .sec-3>h1,
+  .sec-5>h1{
+    font-size: 25px;
+  }
+
+  .sec-1>p,
+  .sec-2>p,
+  .sec-3>p,
+  .sec-5>p{
+    font-size: 15px;
+  }
+
+  .sec-5 .images img {
+    max-width: 180px;
+    margin: 0 20px;
+  }
+
+  .sec-5 .images{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sec-5.show-animate .images img {
+    transform: translateX(0%);
+  }
+
 }

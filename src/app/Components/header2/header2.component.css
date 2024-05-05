@@ -1,7 +1,7 @@
-.header{
+.header {
   width: 100%;
   background-color: red;
-  color:white;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,9 +9,9 @@
   padding: 0 20px;
 }
 
-.left-div{
+.left-div {
   display: flex;
-  gap: 50px;  
+  gap: 50px;
   height: 100%;
   align-items: center;
 }
@@ -20,11 +20,11 @@
   height: 100%;
 }
 
-.img-div img{  
-  height: 100%;  
+.img-div img {
+  height: 100%;
 }
 
-.user-div{
+.user-div {
   display: flex;
   gap: 40px;
   background-color: rgb(212, 17, 17);
@@ -36,20 +36,17 @@
 .aHref-div {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   width: 600px;
   height: 100%;
   align-items: center;
-  /* background-color: blue; */
 }
 
-.aHref-div a{
+.aHref-div a {
   color: white;
-  /* height: 100%; */
   padding: 10px;
 }
 
-.aHref-div a:hover{
+.aHref-div a:hover {
   background-color: white;
   color: red
 }
@@ -64,16 +61,55 @@
   font-weight: bold;
 }
 
-.user-div button:hover{
+.user-div button:hover {
   background-color: white;
 }
 
-.user-div button:active{
+.user-div button:active {
   background-color: rgb(193, 193, 193);
   color: red;
 }
 
-.active{
-  background-color:  rgb(212, 17, 17);
-  color :  white;  
+.active {
+  background-color: rgb(212, 17, 17);
+  color: white;
+}
+
+
+@media(max-width : 1250px) {
+  .left-div {
+    gap: 20px;
+  }
+
+  .aHref-div {
+    justify-content: flex-start;
+    gap: 10px;
+    width: fit-content;
+  }
+}
+
+@media(max-width : 1000px) {
+  .aHref-div a {
+    padding: 6px;
+  }
+
+  .user-div {
+    gap: 10px;
+    padding: 0 15px;
+  }
+
+  .header {
+    padding: 0
+  }
+}
+
+
+@media(max-width : 850px) {
+  .aHref-div {
+    display: none;
+  }
+
+  .user-div>button{
+    display: none;
+  }
 }
