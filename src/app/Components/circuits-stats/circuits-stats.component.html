@@ -1,7 +1,7 @@
 <!-- <button (click)="test()">TEST</button> -->
 
 <div class="container">
-  <section class="circuits">
+  <section class="circuits-table">
     <h3>Click on desired circuit to see more details</h3>
 
     <div class="above-table-div">
@@ -29,5 +29,16 @@
 
     </table>
 
+  </section>
+
+  <section class="circuits-presentation">
+   <div *ngFor="let circuit of circuitsStats,  let i = index" (click)="goToCircuit(circuit.circuitId)">
+    <div class="img-div">
+      <div class="p-div">
+        <p>{{i+1}}. {{circuit?.circuitName}}</p>
+      </div>
+      <img *ngIf="circuit?.circuitName" [src]="'../../../assets/circuits/' + circuit?.circuitName + '.png'" alt="This circuit does not have a picture">
+    </div>
+  </div>
   </section>
 </div>

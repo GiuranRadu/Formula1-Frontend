@@ -3,7 +3,6 @@
   margin: 0;
   padding: 90px 0 0 0;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   min-height: 85vh;
   width: 80%;
@@ -19,15 +18,14 @@
   min-width: 300px;
   transition: transform 0.4s ease-in-out;
   height: 500px;
-  position:relative;
-  /* background-color: red; */
+  position: relative;
 }
 
 .user-card:hover {
   transform: scale(1.05);
 }
 
-.pilot-image-div{
+.pilot-image-div {
   height: 320px;
 }
 
@@ -39,7 +37,7 @@
 }
 
 .user-info {
-  padding: 20px ;
+  padding: 20px;
   text-align: left;
 }
 
@@ -53,12 +51,12 @@
   color: #666;
 }
 
-span{
-  position:absolute;
-  right:0;
-  bottom:0;
+span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   background-color: #c2c2c2;
-  color:white;
+  color: white;
   font-size: 8px;
   padding: 2px 6px;
   border-top-left-radius: 10px;
@@ -68,16 +66,14 @@ span{
   display: inline;
 }
 
-.right-div{
+.right-div {
   width: 100%;
-  /* background-color: red; */
-  /* background-color: whitesmoke; */
   padding: 0 40px;
 }
 
-.right-div h2{
+.right-div h2 {
   background-color: #333;
-  color:white;
+  color: white;
   padding: 5px 10px;
 }
 
@@ -111,7 +107,7 @@ input[type="file"] {
   padding-top: 20px;
 }
 
-.button-div button{
+.button-div button {
   padding: 10px;
   border: none;
   border-radius: 3px;
@@ -124,36 +120,91 @@ input[type="file"] {
   font-weight: bold;
 }
 
-.button-div button:hover{
-  background-color:red;
+.button-div button:hover {
+  background-color: red;
   color: white;
 }
 
-.container2{
+.container2 {
   width: 100%;
   background-color: white;
 }
 
-.container1{
+.container1 {
   position: relative;
 }
 
-.switchButton{
+.switchButton {
   position: absolute;
   right: 60px;
   bottom: 150px;
   background-color: goldenrod;
-  color:white;
+  color: white;
   font-weight: bold;
   border-radius: 4px;
-  border:none;
+  border: none;
   padding: 10px 20px;
 }
 
-.switchButton:hover{
+.switchButton:hover {
   background-color: rgb(218, 225, 4);
 }
 
-.hidden{
+.hidden {
   display: none;
+}
+
+
+@media(max-width:900px) {
+
+  .container1 {
+    width: 95%;
+  }
+
+
+  .user-card {
+    min-width: 230px;
+  }
+
+  .right-div {
+    padding: 0 10px;
+  }
+}
+
+
+@media(max-width:600px) {
+  .container1 {
+    flex-direction: column;
+    width: 80%;
+    margin-top: 40px;
+  }
+
+  .container2{
+    padding: 0;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .user-card {
+    height: 420px;
+  }
+
+  .pilot-image-div {
+    height: 250px;
+  }
+
+  .user-photo {
+    height: 100%;
+  }
+
+
+  .right-div {
+    padding: 0
+  }
+
+  form {
+    padding: 10px 0
+  }
 }

@@ -4,8 +4,8 @@
 
   <!-- .LEFT DIV -->
   <div class="left-div"  *ngIf="myComments.length!==0">
-    <div class="comment" *ngFor="let comment of myComments ">
-      
+
+    <div class="comment" *ngFor="let comment of myComments ">      
       <div class="user-info">
         <h3>{{comment.creatorName}}</h3>
         <button *ngIf="isTrashOpen" (click)="deleteComment(comment._id)" class="delete-button">Delete</button>

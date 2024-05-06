@@ -38,7 +38,7 @@
 .container2 {
   display: flex;
   justify-content: space-between;
-  padding: 50px;
+  /* padding: 50px; */
 
 }
 
@@ -244,13 +244,21 @@
     width: 100%;
   }
 
-  .navbar {  
-    padding: 0 
-    
+  .navbar {
+    justify-content: space-around;
+
+  }
+
+  .first-h2-div{
+    display: none;
+  }
+
+  .update-button {
+    width: 30%;
   }
 
   .h2-div>h2 {
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
   }
 }

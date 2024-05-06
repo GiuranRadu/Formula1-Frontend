@@ -129,3 +129,19 @@ span:hover{
   border-radius: 6px;
   font-weight: bold;
 }
+
+@media(max-width:750px){
+  .above-table-div{
+    height: 35px;
+  }
+  .above-table-div>h2{
+    font-size: 20px;
+  }
+
+  th, td {  
+    border :1px solid #333;  
+    text-align: left;
+    padding: 5px;
+    font-size: 12px;
+  }
+}

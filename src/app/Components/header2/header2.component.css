@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  background-color: red;
+  background-color: #d41111;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -10,7 +10,7 @@
 }
 
 .hamburger-icon {
-  width: 40px;
+  width: 30px;
   display: none;
   transition: 0.5s;
 }
@@ -34,23 +34,23 @@
 }
 
 .descending-navbar>a{
-  background-color: red;
+  background-color: #d41111;
   color:white;
-  padding: 15px;
+  padding: 10px;
   text-align: center;
   text-decoration: none;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .descending-navbar>button{
-  background-color: black;
-  color:red;
+  background-color: #2e2c36;
+  color:white;
   width: 60%;
   padding: 10px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   border-radius: 5px;
   border: none;
@@ -116,7 +116,7 @@
 .user-div {
   display: flex;
   gap: 40px;
-  background-color: rgb(212, 17, 17);
+  background-color: #d41111;
   height: 100%;
   align-items: center;
   padding: 0 20px;
@@ -160,11 +160,9 @@
 }
 
 .active {
-  background-color: rgb(212, 17, 17);
+  background-color: red;
   color: white;
 }
-
-
 
 @media(max-width : 1250px) {
   .left-div {

@@ -18,12 +18,12 @@
 body{
   background-color: #dfdfdf;
   min-height: 100vh;
+  padding-bottom: 100px;
 }
 
 .container {
   width: 85%;
   margin: 0 auto;
-  /* background-color: #dbdbdb; */
 }
 
 .circuitName{
@@ -38,7 +38,6 @@ body{
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* background-color: beige !important; */
   height: 100px;
 }
 
@@ -64,12 +63,10 @@ body{
 }
 
 .middle-div {
-  /* background-color: beige !important; */
 }
 
 .imgAndStandings-div {
   width: 100%;
-  /* background-color: beige !important; */
   display: flex;
 }
 
@@ -85,25 +82,22 @@ body{
 .standings {
   width: 50%;
   padding: 30px;
-  /* background-color: beige !important; */
 }
 
-.pilots-div {
-  
+.pilots-div {  
   display: flex;
   flex-direction: column;
   gap: 30px;
-
 }
 
 .pilot {
-  /* background-color: red; */
   display: flex;
-  /* justify-content: space-between; */
   width: 100%;
   margin-top: 20px;
   padding: 10px;  
-  cursor:pointer
+  cursor:pointer;
+  background-color: rgb(240, 240, 240);
+  border-radius: 4px;
 }
 
 .pilot div:first-child {  
@@ -112,11 +106,6 @@ body{
 
 .pilot div:nth-child(2){  
   width: 40%;
-}
-
-.pilot{
-  background-color: rgb(240, 240, 240);
-  border-radius: 4px;
 }
 
 .gold-background {
@@ -139,4 +128,66 @@ body{
   font-size: 18px;
   border-radius: 6px;
   font-weight: bold;
+}
+
+
+@media(max-width:1050px){
+  .img-div{
+    width: 100%
+  }
+
+  .standings{
+    padding: 0;
+    width: 250px;
+  }
+
+  .pilots-div {  
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pilot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pilot>div{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+  }
+  
+  .pilot p,
+  .pilot span{
+    font-size: 10px;
+  }
+
+}
+
+@media(max-width:700px){
+  .info-div>div>p{
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .info-div>div>h3{
+    font-size: 12px;
+  }
+
+
+  .imgAndStandings-div{
+    flex-direction: column;
+  }
+
+  .standings{
+    width: 100%;
+  }
+
+  .circuitName>h1{
+    font-size: 20px;
+  }
+
+  
 }

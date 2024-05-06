@@ -2,13 +2,11 @@
   width: 100%;
   display: flex;
   min-height: 100vh;
-  /* height: 120vh; */
 }
 
 
 .left-div{
   width: 400px;
-  /* height: 100%; */
   background-color: #333;
   display: flex;
   flex-direction: column;
@@ -154,4 +152,56 @@ input[type="file"] {
 .button-div button:hover{
   background-color:red;
   color: white;
+}
+
+
+@media(max-width:900px){
+  .form-div{
+    width: 100%;
+    height: 100%;
+    margin:0
+  }
+
+  .right-div{
+    padding: 0;
+  }
+}
+
+
+@media(max-width:550px){
+  .container{
+   flex-direction: column;
+  }
+
+  .left-div,
+  .right-div{
+    width: 100%;
+  }
+
+  .left-div{
+    flex-wrap: wrap;
+    height: fit-content;
+    padding-bottom: 20px;
+  }
+
+  .info-div{  
+    background-color: rgb(123, 123, 123);
+    color: white;
+    width: 90%;
+    padding: 10px 20px 30px;
+    border-radius: 4px;
+    height: 200px;
+  }
+
+  .info-div h2{
+    margin-bottom: 10px;
+  }
+
+  .button-div {   
+    padding-top: 10px;
+  }
+
+  .info-div .button-div button{    
+    margin-top: 10px;    
+  }
 }
